@@ -1,0 +1,42 @@
+{
+  "name": "@soitis/soext",
+  "description": "Tools for developing browser extensions by So It Is Solutions",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soitissolutions/soext.git"
+  },
+  "type": "module",
+  "bin": {
+    "soext": "bin/soext.mjs"
+  },
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "files": [
+    "bin",
+    "*.mjs"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "biome check",
+    "test": "npm run check && node --test",
+    "prepublishOnly": "npm test"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.13",
+    "yauzl": "3.4.0"
+  },
+  "dependencies": {
+    "glob": "14.0.6",
+    "minimatch": "11.0.9",
+    "semver": "7.8.6",
+    "yazl": "3.3.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
